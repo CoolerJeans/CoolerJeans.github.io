@@ -13,25 +13,26 @@
         <h1 style="text-align:center">Welcome to the CJ Website!</h1>
 
         <div class="tab">
-            <div>
+            <div style="text-align: center;">
+                <div>
+                    <button>
+                        <a href="/index.html"> CJ Home!</a>
+                    </button>
+                </div>
+                <div>
+                    <button>
+                        <a href="/hobbies.html"> Hobbies!</a>
+                    </button>
+                </div>
                 <button>
-                    <a href="/hobbies.html">Hobbies</a>
-                </button>
-                <button>
-                    <a href="/ziggy.html">Ziggy</a>
+                    <a href="/ziggy.html"> Ziggy!!! </a>
                 </button>
                 <button>
                     <a href="/gallery.html">Gallery</a>
                 </button>
             </div>
         </div>
-        <!-- <div class="tab">
-            <button class="'tablinks" onclick="opentab(event, 'Hobbies')">Hobbies</button>
-        </div> -->
-        <!-- <div id="Hobbies" class="tabcontent">
-            <h2>Here are some of my Hobbies!</h2>
-            
-        </div> -->
+
         <div style="border-radius: 2%;border-color: black; padding: 10%;">
             <h2>All About Me:</h2>
             <p >My name is CJ, which stands for Cool Jeans. I'm a university student who enjoys desserts (very specifically icecream). 
@@ -43,14 +44,29 @@
         </div>
 
         <div style="padding: 10%;">
-            <h2>
+            <!-- <h2>
                 What do you think "CJ" should stand for?
-            </h2>
-            <h1 style="text-align: center;">
-                <form action="text">
-                    <input type="text">
-                </form>
-            </h1>
+            </h2> -->
+            <!-- <h1 style="text-align: center;">
+            </h1> -->
+            <!-- <form onsubmit="return taketheCJ">
+                <input type="text" id="name" required>
+                <button type="submit" onclick="taketheCJ">Enter</button>
+            </form> -->
+
+            <h5 id="show"></h5>
+
+            <script>
+                // const id thename;
+                function taketheCJ() {
+                    let thename = document.getElementById("name");
+                    let text = thename.value
+                    document.getElementById("show").innerHTML = text;
+                    //document.getElementById("show") =
+                    return false
+                }
+            </script>
+            
         </div>
         
         <a href="https://new.willma.me">click here to see my Friend Willma</a>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <title>gallery</title>
 </head>
 <body style="background-color: lightseagreen;">
 
@@ -11,13 +12,45 @@
 
         <h1 style="text-align: center;">My Gallery!</h1>
         
-        <div>
-            <button>
-                <a href="/index.html">Back</a>
-            </button>
+        <div class="tab">
+            <div>
+                <button>
+                    <a href="/index.html">CJ Home</a>
+                </button>
+                <button>
+                    <a href="/hobbies.html">Hobbies</a>
+                </button>
+                <button>
+                    <a href="/ziggy.html">Ziggy</a>
+                </button>
+                <button>
+                    <a href="/gallery.html">Gallery</a>
+                </button>
+            </div>
         </div>
 
-        <h3>Pictures will come soon!</h3>
+    </div>
+    <h3>Pictures will come soon!</h3>
+
+    <div>
+        <body>
+            <label for="user_input">Enter what "CJ" should stand for:</label>
+            <input type="text" id="user_input" style="background-color: lightcoral;" required>
+            <button type="button" onclick="CJstandsfor()" style="background-color: lightskyblue;">Enter</button>
+            <h4 id="exceptions"></h4>
+            <h4 id="show"></h4>
+        </body>
+
+        <script>
+            const result = document.getElementById("user_input");
+            function CJstandsfor(){
+                let text = result.value;
+                //let texter[] = text.split()
+                const words = str.split(' ');
+                document.getElementById("show").innerHTML += text + "\n";
+
+            }
+        </script>
     </div>
 
 
