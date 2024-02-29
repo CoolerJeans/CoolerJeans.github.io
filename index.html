@@ -30,8 +30,15 @@
                 <button>
                     <a href="/gallery.html">Gallery</a>
                 </button>
+                <button onclick="gotoHobbies">Hobbies</button>
             </div>
         </div>
+
+        <script>
+            function gotoHobbies(){
+                window.location.replace("https://www.youtube.com/watch?v=jcYkPb7MvNU");
+            }
+        </script>
 
         <div style="border-radius: 2%;border-color: black; padding: 10%;">
             <h2>All About Me:</h2>
@@ -39,37 +46,76 @@
                 I also like playing the daily sudoku and wordle. If I had to choose my favourite colour, it'd be red
                 I attend the University of Toronto in Mississauga. I currently live with my Mum, brother, sister and dog. I have 4 wonderful best friends. 
                 I strongly dislike audacious people. I love music. Currently I have been enjoying the song "We're just making it worse" by Cameron Avery and Alexandra Saviour.
-                I'm in a few clubs at school, however my attendance is not frequent. I had cake for breakfast this morning.
+                I'm in a few clubs at school, however my attendance is not frequent. I had cake for breakfast the morning I wrote this.
             </p>
+            <p><a href="https://www.youtube.com/watch?v=jcYkPb7MvNU">Click here to listen to "We're Just Making It Worse"</a></p>
         </div>
 
         <div style="padding: 10%;">
-            <!-- <h2>
-                What do you think "CJ" should stand for?
-            </h2> -->
-            <!-- <h1 style="text-align: center;">
-            </h1> -->
-            <!-- <form onsubmit="return taketheCJ">
-                <input type="text" id="name" required>
-                <button type="submit" onclick="taketheCJ">Enter</button>
-            </form> -->
 
+            <div>
+                <body>
+                    <label for="user_input">Enter what "CJ" should stand for:</label>
+                    <input type="text" id="user_input" style="background-color: lightcoral;" required>
+                    <button type="button" onclick="CJstandsfor()" style="background-color: lightskyblue;">Enter</button>
+                    <h4 id="exceptions"></h4>
+                    <h4 id="show"></h4>
+                </body>
+        
+                <script>
+                    const result = document.getElementById("user_input");
+                    const already_given = [];
+                    function CJstandsfor(){
+                        document.getElementById("error").innerHTML = ""
+                        let text = result.value;
+                        const words = text.trim().split(/\s+/);
+                        let text_refomatted = "an error has occured"
+                        
+
+                        if (words.length != 2){
+                            document.getElementById("error").innerHTML = "It should be two words: C and J... you have " + words.length +" words there...";
+                        } 
+                        else{
+                            text_refomatted = words[0].charAt(0).toUpperCase() + words[0].substring(1).toLowerCase() + " " + words[1].charAt(0).toUpperCase() +words[1].substring(1).toLowerCase();
+                        
+                            if(words[0].charAt(0).toUpperCase() != 'C' || (words[1].charAt(0).toUpperCase() != 'J')){
+                                document.getElementById("error").innerHTML = "It should stand for C and J... your first words starts with "+ words[0].charAt(0).toUpperCase() + " and your second words starts with " + words[1].charAt(0).toUpperCase();
+                            }
+                            else if (words[0].toLowerCase().includes("cunt") || words[0].toLowerCase().includes("cooch") || words[0].toLowerCase().includes("cock") || words[0].toLowerCase().includes("cum")){
+                                document.getElementById("error").innerHTML = "Please mind your manners.";
+                                
+                            }
+                            else if(words[0].toLowerCase().includes("clara")){
+                                document.getElementById("error").innerHTML = "I am not entertaining this behaviour.";
+                            }
+                            else if(words[0].toLowerCase() == "c" && words[1].toLowerCase() == "j"){
+                                document.getElementById("error").innerHTML = "Kinda a basic answer... you can do better";
+                            }
+                            else if (already_given.includes(text_refomatted)){
+                                document.getElementById("error").innerHTML = "This combo has already been given.";
+                            }
+                            else{
+                                if (already_given.length != 0){
+                                    document.getElementById("show").innerHTML += ", ";
+                                }
+                                document.getElementById("show").innerHTML += text_refomatted;
+                                already_given.push(text_refomatted);
+                            }     
+                            if(words[0].toLowerCase().includes("cool") || words[0].toLowerCase().includes("creativ")){
+                                document.getElementById("error").innerHTML = "fan behaviour fr";
+
+                            }  
+                        }                 
+                    }
+                </script>
+            </div>
+
+            <h5 id="error"></h5>
             <h5 id="show"></h5>
-
-            <script>
-                // const id thename;
-                function taketheCJ() {
-                    let thename = document.getElementById("name");
-                    let text = thename.value
-                    document.getElementById("show").innerHTML = text;
-                    //document.getElementById("show") =
-                    return false
-                }
-            </script>
             
         </div>
         
-        <a href="https://new.willma.me">click here to see my Friend Willma</a>
+        <a href="https://willma.me">click here to see my Friend Willma</a>
     </div>
 
 </body>
