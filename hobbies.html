@@ -13,21 +13,26 @@
         <h1 style="text-align: center;">All about CJ's Hobbies!</h1>
         
         <div class="tab">
-            <div>
-                <button>
-                    <a href="/index.html">CJ Home</a>
-                </button>
-                <button>
-                    <a href="/hobbies.html">Hobbies</a>
-                </button>
-                <button>
-                    <a href="/ziggy.html">Ziggy</a>
-                </button>
-                <button>
-                    <a href="/gallery.html">Gallery</a>
-                </button>
-            </div>
+            <button type="button" onclick="gotoHome()">CJ Home!</button>
+            <button type="button" onclick="gotoHobbies()">Hobbies</button>     
+            <button type="button" onclick="gotoZiggy()">Ziggy!!!</button>
+            <button type="button" onclick="gotoGallery()">Gallery</button>
         </div>
+
+        <script>
+            function gotoHome(){
+                window.location.replace("/index.html");
+            }
+            function gotoHobbies(){
+                window.location.replace("/hobbies.html");
+            }
+            function gotoZiggy(){
+                window.location.replace("/ziggy.html");
+            }
+            function gotoGallery(){
+                window.location.replace("/gallery.html");
+            }
+        </script>
         
         <div style="padding: 5%;">
             <h2>Crocheting</h2>

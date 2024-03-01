@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(251, 249, 107);">
+    <div style="padding: 5%;">
+        
+        <h1 style="text-align: center;">THE CJ QUIZ</h1>
+        <h3>this page is stil unde construciton</h3>
+        
+        <div class="tab" style="padding-left: 10%;">
+            <button type="button" onclick="gotoHome()">CJ Home!</button>
+            <button type="button" onclick="gotoHobbies()">Hobbies</button>     
+            <button type="button" onclick="gotoZiggy()">Ziggy!!!</button>
+            <button type="button" onclick="gotoGallery()">Gallery</button>
+            <button type="button" onclick="gotoQuiz()">CJ Quiz!</button>
+        </div>
+        
+        
+        <script>
+            function gotoHome(){
+                window.location.replace("/index.html");
+            }
+            function gotoHobbies(){
+                window.location.replace("/hobbies.html");
+            }
+            function gotoZiggy(){
+                window.location.replace("/ziggy.html");
+            }
+            function gotoGallery(){
+                window.location.replace("/gallery.html");
+            }
+            function gotoQuiz(){
+                window.location.replace("/quiz.html");
+            }
+        </script>
+
+    <div style="padding: 10%;">
+        <h3>Question 1</h3>
+        <label for="q1">What is CJ's favourite colour?</label>
+        <!-- <select name="q1" id="q1">
+            <option value="green">Green</option>
+            <option value="blue">Blue</option> 
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+        </select> -->
+        <input type="radio" id="o1">
+        <label for="o1">Red</label>
+        <input type="radio" id="o2">
+        <label for="o2">Green</label>
+        <input type="radio" id="o3">
+        <label for="o3">Blue</label>
+        <input type="radio" id="o4">
+        <label for="o4">Yellow</label>
+    </div>
+    
+    <div style="padding: 10%;">
+        <h3>Question 2</h3>
+        <label for="q1">When is CJ's birthday?</label>
+        <input type="radio" id="o1">
+        <label for="o1">June 9</label>
+        <input type="radio" id="o2">
+        <label for="o2">June 12</label>
+        <input type="radio" id="o3">
+        <label for="o3">June 19</label>
+        <input type="radio" id="o4">
+        <label for="o4">June 7</label>
+    </div>
+
+    <div style="padding: 10%;">
+        <h3>Question 3</h3>
+        <label for="q1">What is the name of CJ's most recent fish?</label>
+        <input type="radio" id="o1">
+        <label for="o1">Piper</label>
+        <input type="radio" id="o2">
+        <label for="o2">Bunny</label>
+        <input type="radio" id="o3">
+        <label for="o3">Hamster</label>
+        <input type="radio" id="o4">
+        <label for="o4">Charles</label>
+    </div>
+</div>
+
+
+    
+</body>
+</html>
